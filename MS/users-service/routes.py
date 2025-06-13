@@ -8,8 +8,8 @@ router = APIRouter()
 templates = Jinja2Templates(directory="views")
 userFactory = UserFactories.create_user_service()
 
-router.add_api_route("/create-user", create_user, methods=["POST"])
-router.add_api_route("/get-user/{user_id}", get_user, methods=["GET"])
+router.add_api_route("/create-user", userFactory.create_user, methods=["POST"])
+router.add_api_route("/get-user/{user_id}", userFactory.get_user, methods=["GET"])
 @router.post("/api/transfer")
 async def api_transfer_balance(request: Request):
     return await userFactory.transfer_balance(request)

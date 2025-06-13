@@ -3,11 +3,11 @@ from fastapi import APIRouter, Request  # type: ignore
 from fastapi.responses import HTMLResponse  # type: ignore
 from fastapi.templating import Jinja2Templates  # type: ignore
 from Controllers.OrderController import *
-from factories.order_factories import OrderFactories, OrderFacade
+from factories.order_factories import OrdersFactories, OrderFacade
 
 router = APIRouter()
 templates = Jinja2Templates(directory="views")
-order = OrderFactories.create_order_service()
+order = OrdersFactories.create_order_service()
 @router.get("/orders-page", response_class=HTMLResponse)
 async def orders_page(request: Request):
     orders = await order.list_orders()

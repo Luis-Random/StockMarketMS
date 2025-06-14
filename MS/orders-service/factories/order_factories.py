@@ -16,8 +16,8 @@ class OrderFacade:
      async def transfer_balance(buyer_id:str, seller_id:str, amount:float):
           return await orderInstance.transfer_balance(buyer_id, seller_id, amount)
      @staticmethod
-     async def list_order():
-          return await orderInstance.list_order()
+     async def list_orders():
+          return await orderInstance.list_orders()
      @staticmethod
      async def process_order_matching(order: Order):
           return await orderInstance.process_order_matching(order)

@@ -9,7 +9,7 @@ class UserFactories:
 class UserFacade:
     @staticmethod
     async def create_user():
-        return list_users()
+        return create_users()
     @staticmethod
     async def list_users():
         return list_users()

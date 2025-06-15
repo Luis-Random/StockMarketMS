@@ -5,7 +5,6 @@ class OrdersFactories:
      def create_order_service():
           return OrderFacade()
 class OrderFacade:
-     orderInstance = Order()
      @staticmethod
      async def fetch_users():
           return await orderInstance.fetch_users()

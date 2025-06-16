@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from routes import router as stocks_router
+from fastapi import FastAPI # type: ignore
+from fastapi.staticfiles import StaticFiles # type: ignore
+from fastapi.templating import Jinja2Templates # type: ignore
+from routes import router as stocks_router 
 
 app = FastAPI()
 app.include_router(stocks_router)

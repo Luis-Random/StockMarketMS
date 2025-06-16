@@ -1,6 +1,6 @@
-from fastapi import APIRouter, Request  # type: ignore
-from fastapi.responses import HTMLResponse  # type: ignore
-from fastapi.templating import Jinja2Templates  # type: ignore
+from fastapi import APIRouter, Request  
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates  
 #from Controllers.UserController import *
 from factories.user_factories import UserFactories
 

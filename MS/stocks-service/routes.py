@@ -1,8 +1,8 @@
-from fastapi import APIRouter, Request
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
+from fastapi import APIRouter, Request # type: ignore
+from fastapi.responses import HTMLResponse # type: ignore
+from fastapi.templating import Jinja2Templates # type: ignore
 #from Controllers.StockController import *
-from Models.Stock import Stock
+from Models.Stock import Stock # type: ignore
 from factories.stock_factories import StockFactories
 from Database.database import get_stock_price_history
 

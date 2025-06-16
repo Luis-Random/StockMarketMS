@@ -9,22 +9,22 @@ class UserFactories:
 class UserFacade:
     @staticmethod
     async def create_user():
-        return create_users()
+        return await create_users()
     @staticmethod
     async def list_users():
-        return list_users()
+        return await list_users()
     @staticmethod
     async def get_user(user_id:str):
-        return get_user(user_id)
+        return await get_user(user_id)
     @staticmethod
     async def user_edit(user_id:str):
-        return user_edit(user_id)
+        return await user_edit(user_id)
     @staticmethod
     async def update_user(request:Request,user_id:str):
-        return update_user(request,user_id)
+        return await update_user(request,user_id)
     @staticmethod
     async def delete_user(user_id:str):
-        return delete_user(user_id)
+        return await delete_user(user_id)
     @staticmethod
     async def transfer_balance(request:Request):
-        return transfer_balance(request)
+        return await transfer_balance(request)

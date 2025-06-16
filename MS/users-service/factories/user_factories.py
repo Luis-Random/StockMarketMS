@@ -8,8 +8,8 @@ class UserFactories:
         return UserFacade()
 class UserFacade:
     @staticmethod
-    async def create_user():
-        return await create_users()
+    async def create_user(request:Request):
+        return await create_user(request)
     @staticmethod
     async def list_users():
         return await list_users()
@@ -17,8 +17,8 @@ class UserFacade:
     async def get_user(user_id:str):
         return await get_user(user_id)
     @staticmethod
-    async def user_edit(user_id:str):
-        return await user_edit(user_id)
+    async def user_edit(request:Request,user_id:str):
+        return await user_edit(request,user_id)
     @staticmethod
     async def update_user(request:Request,user_id:str):
         return await update_user(request,user_id)

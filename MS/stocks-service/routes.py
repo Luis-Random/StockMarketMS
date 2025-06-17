@@ -38,11 +38,11 @@ async def stocks_update(request: Request, stock_id: str):
 async def stocks_delete(stock_id: str):
     return await stockFactory.delete_stock(stock_id)
 
-'''
+
 @router.get("/api/stocks")
 async def api_stocks():
-    return await stockFactory.list_stocks()
-   # return [stocks.__dict__ for stock in stocks]
+    stocks = await stockFactory.list_stocks()
+    return [stock.__dict__ for stock in stocks]
 
 @router.post("/api/update-price")
 async def api_update_price(request: Request):
